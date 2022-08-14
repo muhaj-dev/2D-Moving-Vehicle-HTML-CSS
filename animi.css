@@ -1,0 +1,132 @@
+body{
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.sky, .grass, .road{
+    position: relative;
+ }
+
+ .sky{
+    height: 40%;
+    background-color: skyblue;
+ }
+ 
+  .grass{
+    height: 30%;
+    background-color: green;
+}
+.tree1{
+    position: absolute;
+    top: 56%;
+}
+
+.tree2{
+    position: absolute;
+    top: 55%;
+    right: 5%;
+}
+.tree3{
+    position: absolute;
+    top: 95px;
+    right: 500px;
+}
+.tree4{
+    position: absolute;
+    top: 105px;
+    right: 900px;
+}
+
+.road{
+    height: 30%;
+    background-color: dimgrey;
+    box-sizing: border-box;
+    border-bottom:10px solid grey;
+    border-top:10px solid grey;
+}
+
+
+.line{
+    box-sizing: border-box;
+    border: 5px dashed white;
+    width: 100%;
+    position: absolute;
+    top: 45%;
+}
+ /* ELEMENTS TO ANIME */
+
+ .mario{
+    width: 10%;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    animation: drive 2.6s linear both infinite;
+}
+
+.image2{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    animation: drive 3s linear both infinite reverse;
+}
+
+.image3{
+    width: 10%;
+    position: absolute;
+    top: -50px;
+    animation: drive 3s linear both infinite;
+
+}
+
+.image4{
+    width: 10%;
+    position: absolute;
+    top: 80px;
+    animation: drive 2s linear both infinite reverse;
+
+}
+
+.image5{
+    width: 10%;
+    position: absolute;
+    top: 80px;
+    animation: drive 4s linear both infinite reverse;
+
+}
+
+.image8{
+    width: 20%;
+    position: absolute;
+    top: -60px;
+    animation: drive 4s linear both infinite ;
+
+} 
+
+.cloud{
+    position: absolute 
+}
+.cloud:nth-child(1){
+    width: 200px;
+    top: 100px;
+    opacity: 0.5;
+    animation: cloud 80s linear infinite;
+}
+
+.cloud:nth-child(2){
+    top: 0;
+    animation: cloud 50s linear infinite;
+}
+/* KEYFRAME */
+
+@keyframes drive{
+    from{ transform: translateX(1500px);}
+    to{ transform: translateX(-200px);}
+}
+
+@keyframes cloud {
+    from{left: -350px}
+    to{left: 100%;}
+}
